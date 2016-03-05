@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Sounds</title>
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.29/howler.min.js"></script>
+		<script>
+
+		var sound_array = [
+			"bicycle_bell.wav",
+			"blip.wav",
+			"bloop.wav",
+			"blurp.wav",
+			"boing.wav"
+		];
+
+		function playSound(i){
+			if(i<sound_array.length && i>=0){
+				$('#incoming').text(sound_array[i]);
+				var sound = new Howl({
+				  urls: ["sounds/"+sound_array[i]]
+				}).play();
+			}
+		}
+
+		</script>
+</head>
+<body>
+<script>
+var socket = io.connect('//localhost:3000');
+    socket.on('data', function(data) {
+        //console.log(data);
+        //$('#incoming').text(data);
+				playSound(data);
+    });
+    socket.on('error', function() {
+        console.error(arguments)
+    });
+</script>
+<!--button onclick="playSound(1);">Play</button-->
+<h1 id="incoming"></h1>
+
+</body>
+</html>

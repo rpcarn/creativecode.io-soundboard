@@ -1,0 +1,4 @@
+- in order to use serial port stuff we have to use an older version of node. "n" command switches between different versions of node. Use 0.12.0 @done
+
+- Upload firmata to the arduino
+
