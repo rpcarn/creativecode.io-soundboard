@@ -10,7 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.3",
-    "socket.io": "^1.3.7",
-    "johnny-five": "^0.8.106"
+    "firmata": "^0.9.0",
+    "johnny-five": "^0.8.106",
+    "serialport": "^2.0.6",
+    "socket.io": "^1.3.7"
   }
 }

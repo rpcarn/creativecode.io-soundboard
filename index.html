@@ -12,14 +12,20 @@
 			"blip.wav",
 			"bloop.wav",
 			"blurp.wav",
-			"boing.wav"
+			"boing.wav",
+			"circuit.wav",
+			"earthquake.wav",
+			"explosion.wav",
+			"falling.wav",
+			"shatter.wav",
+			"falling2.wav"
 		];
 
 		function playSound(i){
 			if(i<sound_array.length && i>=0){
-				$('#incoming').text(sound_array[i]);
+				$('#incoming').text(sound_array[i-1]);
 				var sound = new Howl({
-				  urls: ["sounds/"+sound_array[i]]
+				  urls: ["sounds/"+sound_array[i-1]]
 				}).play();
 			}
 		}
@@ -38,7 +44,7 @@ var socket = io.connect('//localhost:3000');
         console.error(arguments)
     });
 </script>
-<!--button onclick="playSound(1);">Play</button-->
+<button onclick="playSound(Math.floor(Math.random() * 10));">Play Random</button>
 <h1 id="incoming"></h1>
 
 </body>
