@@ -3,7 +3,7 @@ Soundboard group project at the GAFFTA Creative Code Immersive
 
 Camille, Jacqueline, Sarah, and Rob built a physical soundboard that plays sounds through a web app and changes a P5.js visualization.
 
-Hardware: Camille, Jacqueline, Sarah  
+Hardware: Camille, Sarah, Jacqueline  
 Software: Rob, Jacqueline
 
 * physical buttons
